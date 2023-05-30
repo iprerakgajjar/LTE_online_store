@@ -1,0 +1,1 @@
+from django.urls import pathfrom . import viewsurlpatterns=[    path('',views.index),    path('about',views.aboutus,name='About US'),    path('contact/',views.contactus,name='Contact US'),    path('products/<int:pid>',views.product,name='Product'),    path('cart',views.cart,name='Cart'),    path('order',views.order,name='Order'),]

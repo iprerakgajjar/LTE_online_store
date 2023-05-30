@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style type="text/css">
+		.main1
+		{
+			background-color: grey;
+			width: 500px;
+			position: center;
+			margin-top: 250px;
+			font-family: century gothic,times new roman,arial,calibri;
+			border-radius: 10px;
+		}
+		#mainhead
+		{
+			padding-top: 10px;
+			width: 270px;
+			outline: none;
+			font-size: 25px;
+		}
+		input[type=text]
+		{
+			background-color: grey;
+			font-family: century gothic,times new roman,arial,calibri;
+			text-decoration: none;
+			text-align: center;
+			font-size: 25px;	
+			outline: none;
+			border: none;
+			border-bottom: 2px solid #fff;
+			width: 250px;
+			margin-bottom: 2px;
+			color:#000;
+		}
+		input[type=password]
+		{
+			background-color: grey;
+			font-family: century gothic,times new roman,arial,calibri;
+			text-decoration: none;
+			text-align: center;
+			font-size: 25px;	
+			outline: none;
+			border: none;
+			border-bottom: 2px solid #fff;
+			width: 250px;
+			margin-bottom: 2px;
+			color:#000;
+		}
+		::placeholder
+		{
+			color:#000;
+		}
+		.sbtbtn
+		{
+			color:#000;
+			background-color: #fff;
+			border:none;
+			height: 40px;
+			width: 100px;
+			font-family: century gothic,times new roman,arial,calibri;
+			font-size: 20px;
+			margin-bottom: 7px;
+			border-radius: 5px;
+			transition: 0.80s;
+			outline: none;
+		}
+		.sbtbtn:hover
+		{
+			color:#fff;
+			background-color: #000;
+			border:none;
+			height: 40px;
+			width: 100px;
+			font-family: century gothic,times new roman,arial,calibri;
+			font-size: 20px;
+			margin-bottom: 7px;
+			border-radius: 5px;
+			transition: 0.80s;
+			outline: none;
+		}
+	</style>
+</head>
+<body bgcolor="#fff">
+	<center>
+		<form method="post" name="loginform" action="index.html" onsubmit="return main1()">
+	<div class="main1">
+		<h2 id="mainhead">Login your Account</h2>
+		<input type="text" name="emailid" id="emailid" placeholder="Enter your emailid"><br/><br/>
+		<input type="password" name="pass" id="pass" placeholder="Enter your password"><br/><br/>
+		<button class="sbtbtn" onclick="main1()">Submit</button>
+	</div>
+	</form>
+	</center>
+</body>
+</html>
+<script type="text/javascript">
+	function main1()
+	{
+		a1=document.forms['loginform']['emailid'].value;
+		a2=document.forms['loginform']['pass'].value;
+		var returnval = false;
+
+		if (a1 == "" || a2 == "")
+		{
+			returnval = false;
+		}else
+		{
+			returnval = true;
+		}
+		return returnval
+	}
+</script>
